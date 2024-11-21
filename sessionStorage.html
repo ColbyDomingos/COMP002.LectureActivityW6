@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="greeting">Hola&nbsp;</h1>
+        
+    <p>Looks like you are <span id="age"></span> years old ad your hobbies include: <span id="hobbies"></span>!</p>
+
+    <script>
+        let greeting = document.getElementById("greeting")
+        let age = document.getElementById("age")
+        let hobbies = document.getElementById("hobbies")
+
+        sessionStorage.setItem("name", "Colby");
+        sessionStorage.setItem("age", 18)
+        sessionStorage.setItem("hobbies", "Coding, sleeping, modeling, creative design")
+
+        greeting.innerText += sessionStorage.getItem("name");
+        age.innerText += sessionStorage.getItem("age");
+        hobbies.innerText += sessionStorage.getItem("hobbies");
+    </script>
+</body>
+</html>
